@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+{% block body %}
+<div class="container text-center my-5">
+    {% if user %}
+    <h1> Имя: {{ user.username }}</h1>
+    <h1> Почта: {{ user.email }}</h1>    
+    {% else %}
+    <h1>Пользователь не найден</h1>
+    {% endif %}
+</div>
+{% endblock %}
